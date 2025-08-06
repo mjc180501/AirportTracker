@@ -46,26 +46,33 @@ To Use:
 
 Project Structure:
 
-AirportTraacker/
-├── server.js              # Express.js backend API
-├── package.json           # Dependencies and scripts
+```text
+AirportTracker/
+├── server.js         # Express.js backend API
+├── package.json      # Dependencies and scripts
 ├── public/
-│   └── index.html         # Frontend
-├── airports.json          # Data storage (created automatically)
-└── README.md             # Project documentation
+│   └── index.html    # Frontend
+├── airports.json     # Data storage (created automatically)
+└── README.md         # Project documentation
 
-API Endpoints:
-Method    Endpoint           Desc
-GET      /api/airports       Get all airport visits
-GET      /api/airports/:id   Get specific visit
-GET      /api/stats          Get statistics summary
-POST     /api/airports       Add new airport visit
-PUT      /api/airports/:id   Update airport visit
-DELETE   /api/airports/:id   Delete airport visit
+```
 
+API Endpoints
 
-Each airport visit contains:
+| Method | Endpoint              | Description               |
+|--------|-----------------------|---------------------------|
+| GET    | `/api/airports`       | Get all airport visits    |
+| GET    | `/api/airports/:id`   | Get specific visit        |
+| GET    | `/api/stats`          | Get statistics summary    |
+| POST   | `/api/airports`       | Add new airport visit     |
+| PUT    | `/api/airports/:id`   | Update airport visit      |
+| DELETE | `/api/airports/:id`   | Delete airport visit      |
 
+---
+
+Each airport visit is represented as a JSON object:
+
+```json
 {
   "id": 1,
   "code": "STL",
@@ -78,6 +85,8 @@ Each airport visit contains:
   "createdAt": "2024-08-06T21:00:00.000Z",
   "updatedAt": "2024-08-06T21:00:00.000Z"
 }
+```
+
 
 Built with: 
 Node.js
