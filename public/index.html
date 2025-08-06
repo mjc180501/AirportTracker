@@ -329,7 +329,7 @@
             <button class="nav-btn" data-section="add">Add Visit</button>
         </div>
 
-        <!-- Home Section -->
+        <!-- Home section -->
         <div id="home" class="content-section active">
             <div class="home-stats">
                 <div class="stat-card">
@@ -350,7 +350,7 @@
             <p>Use this app to keep track of all the airports you've visited, rate your experiences, and add personal notes about each visit. Navigate to the Airport Grid to see all your visits, or use Add Visit to log a new airport.</p>
         </div>
 
-        <!-- Grid Section -->
+        <!-- Grid ssection -->
         <div id="grid" class="content-section">
             <h2>Your Airport Visits</h2>
             <div id="airportGrid" class="airport-grid">
@@ -361,7 +361,7 @@
             </div>
         </div>
 
-        <!-- Add Visit Section -->
+        <!-- Add Visit section -->
         <div id="add" class="content-section">
             <h2>Add New Airport Visit</h2>
             <form id="airportForm">
@@ -427,7 +427,7 @@
                 return airportData;
             } catch (error) {
                 console.error('Error fetching airports:', error);
-                // Fallback to sample data for demo purposes
+                // fallback to sample data for demo purposes
                 airportData = [
                     {
                         id: 1,
@@ -532,7 +532,8 @@
 
         // UI helper functions
         function showNotification(message, type = 'success') {
-            // Create notification element
+            // create notification element
+            // this took forever
             const notification = document.createElement('div');
             notification.className = `notification ${type}`;
             notification.style.cssText = `
@@ -634,7 +635,7 @@
             // Form submission
             document.getElementById('airportForm').addEventListener('submit', handleFormSubmit);
 
-            // Auto-uppercase airport code input
+            // Auto- uppercase airport code input
             document.getElementById('airportCode').addEventListener('input', function(e) {
                 e.target.value = e.target.value.toUpperCase();
             });
