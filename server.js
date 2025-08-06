@@ -11,15 +11,15 @@ const DATA_FILE = path.join(__dirname, 'airports.json');
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public')); // Serve static files from public directory
+app.use(express.static('public')); // Serve static files from public/ directory
 
-// Initialize data file if it doesn't exist
+// initialize data file if it doesn't exist
 async function initializeDataFile() {
     try {
         await fs.access(DATA_FILE);
         console.log('Found existing airports.json file');
     } catch (error) {
-        // File doesn't exist, create it with sample data
+        // if file doesn't exist populate it with sample data
         console.log('Creating new airports.json file with sample data...');
         const sampleData = [
             {
@@ -61,7 +61,7 @@ async function initializeDataFile() {
     }
 }
 
-// Helper function to read airports data
+// function to read airports data
 async function readAirports() {
     try {
         const data = await fs.readFile(DATA_FILE, 'utf8');
@@ -72,7 +72,7 @@ async function readAirports() {
     }
 }
 
-// Helper function to write airports data
+// function to write airports data
 async function writeAirports(airports) {
     try {
         await fs.writeFile(DATA_FILE, JSON.stringify(airports, null, 2));
