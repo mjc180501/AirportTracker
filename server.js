@@ -253,12 +253,12 @@ async function startServer() {
     try {
         await initializeDataFile();
         app.listen(PORT, () => {
-            console.log(`🚀 Airport Tracker API running on port ${PORT}`);
-            console.log(`🌐 Access the app at: http://localhost:${PORT}`);
-            console.log('📁 Data will be stored in airports.json');
+            console.log(`Airport Tracker API running on port ${PORT}`);
+            console.log(`Access the app at: http://localhost:${PORT}`);
+            console.log('Data will be stored in airports.json');
         });
     } catch (error) {
-        console.error('❌ Failed to start server:', error);
+        console.error('Failed to start server:', error);
         process.exit(1);
     }
 }
