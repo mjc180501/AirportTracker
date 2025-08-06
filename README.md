@@ -36,10 +36,10 @@ Requires Node.js and npm
 To Use:
 
 1. Clone the repository
-   ```text
+```text
    git clone https://github.com/mjc180501/AirportTracker.git
    cd AirportTracker
-   ```
+```
 
 3. Install dependencies
  ```text
