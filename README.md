@@ -36,13 +36,20 @@ Requires Node.js and npm
 To Use:
 
 1. Clone the repository
+   ```text
    git clone https://github.com/mjc180501/AirportTracker.git
    cd AirportTracker
-2. Install dependencies
+   ```
+
+3. Install dependencies
+ ```text
    npm install
-3. Start the server
+  ```
+5. Start the server
+```text
    npm start
-4. Navigate to https://localhost:3000
+  ```
+6. Navigate to https://localhost:3000
 
 Project Structure:
 
